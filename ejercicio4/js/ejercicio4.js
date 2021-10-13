@@ -21,21 +21,21 @@ class Pelicula {
       if (p2.vivo)
         p2.dispararA(p1)
     }while (p1.vivo && p2.vivo)
-    console.log('THE END')
+    console.log('THE END') // Había un símbolo extraño haciendose pasar por un ;
   }
 }
 
 class Personaje{
-  constructor(nombre){
+  constructor(nombre){ // Faltaba el nombre en el constructor
     this.nombre = nombre
     this.arma = new Arma()
     this.vivo = true
   }
   hablar(texto){
-    console.log(`${this.nombre}: "${texto}"` )
+    console.log(`${this.nombre}: "${texto}"` ) // Cambiadas las comillas
   }
   dispararA(personaje){
-    personaje.arma.disparar()
+    personaje.arma.disparar() // Faltaba el personaje
     if (Math.random() < 0.3){
       personaje.hablar('¡Maldita sea! ¡Me has dado!')
       personaje.vivo = false

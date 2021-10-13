@@ -6,8 +6,9 @@
 
 'use strict'
 
-//Declara aquí las clases
+// Declara aquí las clases
 
+// Clase Vehiculo
 class Vehiculo{
   constructor(fechaFabricacion){
     this.fechaFabricacion=fechaFabricacion
@@ -17,6 +18,7 @@ class Vehiculo{
   }
 }
 
+// Clase Coche
 class Coche extends Vehiculo {
   constructor(fechaFabricacion,matricula, combustible, esNuevo) {
     super(fechaFabricacion)
@@ -25,11 +27,12 @@ class Coche extends Vehiculo {
     this.esNuevo=esNuevo
   }
   vender(comprador) {
-    this.esNuevo=false
-    super.venderA(comprador)
+    this.esNuevo=false // Si se vende ya no es nuevo
+    super.venderA(comprador) //Llama a venderA y modifica el propietario
   }
 }
 
+// Clase Bicicleta
 class Bicicleta extends Vehiculo {
   constructor(fechaFabricacion,color) {
     super(fechaFabricacion)

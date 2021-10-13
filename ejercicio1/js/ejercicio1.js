@@ -12,10 +12,10 @@ function sumar(lista) {
   let total = 0;
   for(let i=0;i<lista.length;i++) {
     total=total+lista[i]
-    if(Number.isNaN(parseFloat(lista[i]))) {
-      return hola
+    if(Number.isNaN(parseFloat(lista[i]))) { // Pregunta por valor NaN
+      return error
     }
-    console.log(parseFloat(lista[i]));
+    console.log(parseFloat(lista[i])); //Comprobación
   }
   return total
 }
